@@ -17,6 +17,8 @@
 		DD57F5D028EA027500ECFCC6 /* PrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57F5CF28EA027500ECFCC6 /* PrixTests.swift */; };
 		DD57F5DA28EA027500ECFCC6 /* PrixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57F5D928EA027500ECFCC6 /* PrixUITests.swift */; };
 		DD57F5DC28EA027500ECFCC6 /* PrixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57F5DB28EA027500ECFCC6 /* PrixUITestsLaunchTests.swift */; };
+		DD57F5EC28EA079000ECFCC6 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57F5E828EA079000ECFCC6 /* Account+CoreDataClass.swift */; };
+		DD57F5EE28EA079000ECFCC6 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57F5EA28EA079000ECFCC6 /* Goal+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		DD57F5D528EA027500ECFCC6 /* PrixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD57F5D928EA027500ECFCC6 /* PrixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrixUITests.swift; sourceTree = "<group>"; };
 		DD57F5DB28EA027500ECFCC6 /* PrixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DD57F5E828EA079000ECFCC6 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD57F5EA28EA079000ECFCC6 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		DD57F5B428EA027200ECFCC6 /* Prix */ = {
 			isa = PBXGroup;
 			children = (
+				DD57F5F028EA07A100ECFCC6 /* Model */,
 				DD57F5B528EA027200ECFCC6 /* AppDelegate.swift */,
 				DD57F5B728EA027200ECFCC6 /* SceneDelegate.swift */,
 				DD57F5B928EA027200ECFCC6 /* ViewController.swift */,
@@ -128,6 +133,15 @@
 				DD57F5DB28EA027500ECFCC6 /* PrixUITestsLaunchTests.swift */,
 			);
 			path = PrixUITests;
+			sourceTree = "<group>";
+		};
+		DD57F5F028EA07A100ECFCC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD57F5E828EA079000ECFCC6 /* Account+CoreDataClass.swift */,
+				DD57F5EA28EA079000ECFCC6 /* Goal+CoreDataClass.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD57F5EE28EA079000ECFCC6 /* Goal+CoreDataClass.swift in Sources */,
 				DD57F5C028EA027200ECFCC6 /* Prix.xcdatamodeld in Sources */,
+				DD57F5EC28EA079000ECFCC6 /* Account+CoreDataClass.swift in Sources */,
 				DD57F5BA28EA027200ECFCC6 /* ViewController.swift in Sources */,
 				DD57F5B628EA027200ECFCC6 /* AppDelegate.swift in Sources */,
 				DD57F5B828EA027200ECFCC6 /* SceneDelegate.swift in Sources */,
@@ -370,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -424,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -444,11 +460,13 @@
 				DEVELOPMENT_TEAM = 25PR6Y47QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Prix/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,9 +474,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karpiv.Prix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,11 +493,13 @@
 				DEVELOPMENT_TEAM = 25PR6Y47QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Prix/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,9 +507,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karpiv.Prix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
